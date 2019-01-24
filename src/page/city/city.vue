@@ -54,11 +54,11 @@
             headTop
         },
 
-        // computed:{
+        computed:{
 
-        // },
+        },
 
-         methods:{
+        methods:{
             initData(){
                 //获取搜索历史记录
                 if (getStore('placeHistory')) {
@@ -67,7 +67,7 @@
                     this.placelist = [];
                 }
             },
-        //     //发送搜索信息inputVaule
+            //发送搜索信息inputVaule
             postpois(){
                 //输入值不为空时才发送信息
                 if (this.inputVaule) {
@@ -78,10 +78,10 @@
                     })
                 }
             },
-        //     /**
-        //      * 点击搜索结果进入下一页面时进行判断是否已经有一样的历史记录
-        //      * 如果没有则新增，如果有则不做重复储存，判断完成后进入下一页
-        //      */
+            /**
+             * 点击搜索结果进入下一页面时进行判断是否已经有一样的历史记录
+             * 如果没有则新增，如果有则不做重复储存，判断完成后进入下一页
+             */
             nextpage(index, geohash){
                 let history = getStore('placeHistory');
                 let choosePlace = this.placelist[index];
@@ -106,7 +106,7 @@
                 removeStore('placeHistory');
                 this.initData();
             }
-         }
+        }
     }
 
 </script>
@@ -185,3 +185,4 @@
         background-color: #fff;
     }
 </style>
+
