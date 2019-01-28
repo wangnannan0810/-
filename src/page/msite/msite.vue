@@ -1,5 +1,6 @@
 <template>
     <div>
+		
     	<head-top signin-up='msite'>
     		<router-link :to="'/search/geohash'" class="link_search" slot="search">
 	    		<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -10,7 +11,7 @@
 			<router-link to="/home" slot="msite-title" class="msite_title">
 				<span class="title_text ellipsis">{{msiteTitle}}</span>
 			</router-link>
-    	</head-top>
+    	</head-top> 
     	<nav class="msite_nav">
     		<div class="swiper-container" v-if="foodTypes.length">
 		        <div class="swiper-wrapper">
@@ -26,7 +27,7 @@
 		        <div class="swiper-pagination"></div>
 		    </div>
 		    <img src="../../images/fl.svg" class="fl_back animation_opactiy" v-else>
-    	</nav>
+    	</nav> 
     	<div class="shop_list_container">
 	    	<header class="shop_header">
 	    		<svg class="shop_icon">
@@ -36,19 +37,19 @@
 	    	</header>
 	    	<shop-list v-if="hasGetData" :geohash="geohash"></shop-list>
     	</div>
-    	<foot-guide></foot-guide>
+    	<foot-guide></foot-guide>  
     </div>    
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
-// import {imgBaseUrl} from 'src/config/env'
-import headTop from 'src/components/header/head'
-import footGuide from 'src/components/footer/footGuide'
-import shopList from 'src/components/common/shoplist'
-import {msiteAddress, msiteFoodTypes, cityGuess} from 'src/service/getData'
-import 'src/plugins/swiper.min.js'
-import 'src/style/swiper.min.css'
+ import {mapMutations} from 'vuex'
+ import {imgBaseUrl} from 'src/config/env'
+ import headTop from 'src/components/header/head'
+ import footGuide from 'src/components/footer/footGuide'
+ import shopList from 'src/components/common/shoplist'
+ import {msiteAddress, msiteFoodTypes, cityGuess} from 'src/service/getData'
+ import 'src/plugins/swiper.min.js'
+ import 'src/style/swiper.min.css'
 
 export default {
 	data(){
@@ -98,11 +99,11 @@ export default {
     components: {
     	headTop,
     	shopList,
-    	footGuide,
+    	 footGuide,
     },
-    computed: {
+    // computed: {
 
-    },
+    // },
     methods: {
     	...mapMutations([
     		'RECORD_ADDRESS', 'SAVE_GEOHASH'
@@ -117,9 +118,9 @@ export default {
     		}
     	}
     },
-    watch: {
+    // watch: {
 
-    }
+    // }
 }
 
 </script>
