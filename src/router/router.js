@@ -18,6 +18,7 @@ const addAddress = r => require.ensure([], () => r(require('../page/confirmOrder
 const searchAddress = r => require.ensure([], () => r(require('../page/confirmOrder/children/children/children/searchAddress')), 'searchAddress')
 const payment = r => require.ensure([], () => r(require('../page/confirmOrder/children/payment')), 'payment')
 const userValidation = r => require.ensure([], () => r(require('../page/confirmOrder/children/userValidation')), 'userValidation')
+
 export default [{
     path: '/',
     component: App, //顶层路由，对应index.html

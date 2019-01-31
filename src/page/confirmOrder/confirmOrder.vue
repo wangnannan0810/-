@@ -155,7 +155,7 @@
         },
         created(){
             //获取上个页面传递过来的geohash值
-            this.geohash = this.$route.query.geohash;
+            //this.geohash = this.$route.query.geohash;
             //获取上个页面传递过来的shopid值
             this.shopId = this.$route.query.shopId;
             this.INIT_BUYCART();
